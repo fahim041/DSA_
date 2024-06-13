@@ -33,12 +33,3 @@ class DynamicArray:
         for i in range(self.count):
             if self.arr[i]:
                 print(self.arr[i])
-
-da = DynamicArray()
-da.append(4)
-da.append(7)
-da.append(1)
-
-da.pop()
-
-da.print()
