@@ -41,6 +41,26 @@ class LinkedList:
     def print(self):
         curr = self.head.next
         while curr:
-            print(curr.val, '-> ', end="")
+            print(curr.val)
             curr = curr.next
+
+# test cases for linked list with assertion
+def test_linked_list():
+    ll = LinkedList()
+    ll.insertEnd(1)
+    ll.insertEnd(2)
+    ll.insertEnd(3)
+    ll.insertEnd(4)
+    ll.insertEnd(5)
+
+    ll.removeEnd()
+    ll.removeIndex(2)
+    ll.removeFront()
+
+    assert ll.head.next.val == 2
+    assert ll.tail.val == 4
+
+    print('All test cases pass')
+
+test_linked_list()
 
