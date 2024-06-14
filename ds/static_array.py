@@ -48,3 +48,24 @@ class StaticArray:
         for i in self.arr:
             if i:
                 print(i)
+
+# test cases
+def test_static_array():
+    sa = StaticArray(5)
+    sa.append(1)
+    sa.append(2)
+    sa.append(3)
+    sa.append(4)
+    sa.append(5)
+
+    sa.pop()
+    sa.insert(2, 3)
+    sa.remove(1)
+
+    assert len(sa.arr) == 5
+    assert sa.count == 4
+    assert sa.arr[1] == 3
+
+    print('All test cases pass')
+
+test_static_array()
