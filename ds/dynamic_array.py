@@ -33,3 +33,22 @@ class DynamicArray:
         for i in range(self.count):
             if self.arr[i]:
                 print(self.arr[i])
+
+# test cases
+def test_dynamic_array():
+    da = DynamicArray()
+    da.append(1)
+    da.append(2)
+    da.append(3)
+    da.append(4)
+    da.append(5)
+
+    da.pop()
+
+    assert len(da.arr) == 8
+    assert da.count == 4
+    assert da.arr[3] == 4
+
+    print('All test cases pass')
+
+test_dynamic_array()
